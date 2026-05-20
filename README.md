@@ -1,8 +1,19 @@
 # design-and-planning
 
 ## Requirements
-- Sweep PerovSkite devices
+- Sweep Perovskite devices
 - Transmit IV data over Iridium
+
+## Goals
+Targets to keep in mind with the following aspects
+- Power Budget Requirements
+  - Some frameworks may be more compute heavy, thus requiring a bigger microcontroller and more power
+- High testability
+  - Unit testing is a must, SITL would be nice
+- High modularity
+  - Cohesive modules that are very decoupled from each other
+- Lower learning curve
+  - If our software base is too steep of a learning curve, we'll have a hard time getting new students to engage with it
 
 ## Key Decisions
 ### Framework and OS
