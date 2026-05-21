@@ -10,7 +10,7 @@
 
 ## Goals
 ### Power Budget
-Gemini suggests a minimum of 64kb of SRAM for the OS, but it can be pruned using the kConfig. It may be a little bit more computation than FreeRTOS, but with pruning I don't think its a ton more.
+Gemini suggests a minimum of 32KB of SRAM for the OS, but it can be pruned using the kConfig. It may be a little bit more computation than FreeRTOS, but with pruning I don't think its a ton more.
 
 Notably, unlike FreeRTOS, Zephyr does REQUIRE a 32-bit device, so an MSP430 would be out of the question.
 
