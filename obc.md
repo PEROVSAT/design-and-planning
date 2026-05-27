@@ -53,14 +53,14 @@ quote needed
 - 20kRAD
 - Power draw: 0.4w
 
-#### [Spacemanic EDDIE] (https://spacemanic.com/products/eddie/)
+#### [Spacemanic EDDIE](https://spacemanic.com/products/eddie/)
 $4500
 - onboards sensors: Gyro, accelerometer, magnetometer, temperature
 - MSP430
 - 6MB FRAM
 - Power draw: 0.06-0.1w
 
-#### [GomSpace NanoMind A3200] (https://gomspace.com/product/nanomind-a3200/)
+#### [GomSpace NanoMind A3200](https://gomspace.com/product/nanomind-a3200/)
 quote needed
 - High-performance AVR32 MCU
 - 512 KB build-in flash
@@ -70,7 +70,7 @@ quote needed
 - 3-axis sensor, gyroscope
 - Typical power draw: 0.17w (0.9w MAX)
 
-#### [C3S OBC] (https://c3s.hu/subsystems/#obc)
+#### [C3S OBC](https://c3s.hu/subsystems/#obc)
 quote needed
 - ARM Cortex-M7
 - 0.46W
@@ -87,4 +87,16 @@ Some evidence exists that cheaper development or single-board computers (SBCs) w
 [Reddit: RPI0 as OBC](https://www.reddit.com/r/cubesat/comments/17riia3/raspberry_pi_zero_as_the_obc/)
 [NASA: Raspberry Pi in Space](https://nepp.nasa.gov/docs/papers/2021-Guertin-Raspberry-Pi-Guideline-CL-21-5641.pdf)
 
+#### [NUCLEO-U575ZI-Q](https://docs.zephyrproject.org/latest/boards/st/nucleo_u575zi_q/doc/index.html)
+Looks to be easily the best option on the dev board side:
+- 2MB Flash with ECC
+- SRAM:
+  - 786 KB with ECC off
+  - 722 KB ECC off + 322 KB ECC on
+- Single precision FPU
+- ~10mW power draw (!!!)
+- Native Zephyr support
+- Fairly accurate clocks for a devboard
+
+#### (NUCLEO-L552ZE-Q)(https://docs.zephyrproject.org/latest/boards/st/nucleo_l552ze_q/doc/nucleol552ze_q.html)
 
