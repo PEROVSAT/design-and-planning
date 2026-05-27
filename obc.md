@@ -38,6 +38,37 @@ The OBC has to be powerful enough to support the framework/OS and our code that 
 #### [Spacemanic Deep Thought](https://spacemanic.com/products/deep-thought/)
 $6100 FM, $4100 EM
 
+#### [NANOobc-2](https://www.skylabs.si/products/nanoobc-2/)
+quote needed
+-PicoSkyFT SoC processor
+-4MB MRAM (EDAC, LCL protected)
+-2MB SRAM (EDAC, LCL protected)
+-2GB highspeed redundant NAND Flash
+-Power draw:0.8-1w
+
+#### [AAC Clyde Krypten-M3](https://www.aac-clyde.space/what-we-do/space-products-components/command-data-handling/kryten-m3#expandable-form-panel-)
+-ARM Cortex-M3 processor
+-16MB MRAM
+-20kRAD
+-Power draw: 0.4w
+
+#### [Spacemanic EDDIE] (https://spacemanic.com/products/eddie/)
+$4500
+-onboards sensors: Gyro, accelerometer, magnetometer, temperature
+-MSP430
+-6MB FRAM
+-Power draw: 0.06-0.1w
+
+#### [GomSpace NanoMind A3200] (https://gomspace.com/product/nanomind-a3200/)
+quote needed
+-High-performance AVR32 MCU
+-512 KB build-in flash
+-128 MB NOR flash
+-32 kB FRAM
+-32 MB SDRAM
+-3-axis sensor, gyroscope
+-Typical power draw: 0.17w (0.9w MAX)
+
 ### Custom
 We had a team chat about this. It is a little on the risky side, and with the amount of time to design, print, and verify it, we would have likely spent enough on man hours to have been able just to buy the industrial options. We agreed it would be best to stick to a development board or COTS OBC
 
