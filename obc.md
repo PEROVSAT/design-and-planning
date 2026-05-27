@@ -47,6 +47,7 @@ quote needed
 - Power draw:0.8-1w
 
 #### [AAC Clyde Krypten-M3](https://www.aac-clyde.space/what-we-do/space-products-components/command-data-handling/kryten-m3#expandable-form-panel-)
+quote needed
 - ARM Cortex-M3 processor
 - 16MB MRAM
 - 20kRAD
@@ -69,7 +70,14 @@ quote needed
 - 3-axis sensor, gyroscope
 - Typical power draw: 0.17w (0.9w MAX)
 
-####
+#### [C3S OBC] (https://c3s.hu/subsystems/#obc)
+quote needed
+- ARM Cortex-M7
+- 0.46W
+- Radiation hardened
+
+#### <10k options: 2nd Space MASTER OBC, Space Inventor OBC
+
 ### Custom
 We had a team chat about this. It is a little on the risky side, and with the amount of time to design, print, and verify it, we would have likely spent enough on man hours to have been able just to buy the industrial options. We agreed it would be best to stick to a development board or COTS OBC
 
