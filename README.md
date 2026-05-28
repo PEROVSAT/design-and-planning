@@ -1,42 +1,38 @@
 # design-and-planning
 
-## Requirements
-- Sweep Perovskite devices
-- Transmit IV data over Iridium
+## This Repository
+This repository is made to store all the design and learning notes pertinent to the software team. It is broken up into three subsections
+## Exploration
+Used at the very beginning of the mission, this section mainly has initial research information on important aspects of the mission, including:
+### Fault Detection, Isolation, and Recovery
+How do we deal with radiation in space, as well as any other hardware issues that may occur?
+### On-Board Computer
+This is the most important piece of the mission hardware to our team. It defines the memory and compute limitations we are working with, as well as supplying some hardware reliability features for things we cannot handle in software
 
-## Goals
-Targets to keep in mind with the following aspects
-- Power Budget Requirements
-  - Some frameworks may be more compute heavy, thus requiring a bigger microcontroller and more power
-- High testability
-  - Unit testing is a must, SITL would be nice
-- High modularity
-  - Cohesive modules that are very decoupled from each other
-- Lower learning curve
-  - If our software base is too steep of a learning curve, we'll have a hard time getting new students to engage with it
+We explore various requirements of the board for it to meet our software goals, in addition to looking at some initial options for the hardware team to look at in more depth.
 
-## Key Decisions
-### Framework and OS
-- Bare metal superloop
-  - No discrete tasks or context switching, done in specific ordering
-- Standalone RTOS
-  - Choice generally between FreeRTOS or Zephyr
-- Framework
-  - cFS or F'
-  - Still has an underlying RTOS (likely FreeRTOS)
+### Frameworks and Operating Systems
+Frameworks and operating systems exist to provide various levels of abstraction from the bare metal. This section explores what options are available, and the tradeoffs each has for the features it provides.
 
-### Over-The-Air Binary Updates
-- Had this on RhokSat
-- If we find a bug in the software, this would allow us to push an update in deployment
+We considered:
+- NASA's core Flight System (cFS)
+- JPL's F-Prime (F')
+- Custom framework on top of Zephyr
+- Custom framework on top of FreeRTOS
+- Custom framework on bare metal (all code made in-house)
 
-### Fault Detection, Isolation, and Recovery Handling
-- What way(s?) should software handle FDIR?
-- This also encompasses how we do safe mode
+## Learning
+This section is essentially stripped-down wikis for various technologies that a new member to the team will need to learn to get a full grasp of the project.
 
-### Data Storage
-- Filesystem on an external drive (like an SD card)?
-- Raw placement in memory?
+### Zephyr
+In the exploration phase, we decided on Zephyr as our best option. While Zephyr provides a lot of great features, it adds a lot of additional complexity. We cover the following aspects of the OS:
+- The DeviceTree
+- Kconfig
+- Driver Model
+- Thread Model
+- Inter-Process Communication (IPC)
+- Watchdog System
+- Power Management System
+- Meta Tool Usage
+- Testing
 
-### Telemetry
-- Packet Format
-- Compression?

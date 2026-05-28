@@ -98,5 +98,6 @@ Looks to be easily the best option on the dev board side:
 - Native Zephyr support
 - Fairly accurate clocks for a devboard
 
-#### (NUCLEO-L552ZE-Q)(https://docs.zephyrproject.org/latest/boards/st/nucleo_l552ze_q/doc/nucleol552ze_q.html)
+#### [NUCLEO-L552ZE-Q](https://docs.zephyrproject.org/latest/boards/st/nucleo_l552ze_q/doc/nucleol552ze_q.html)
+
 
