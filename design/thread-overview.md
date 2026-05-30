@@ -1,14 +1,14 @@
 # Flight Software Thread Model
+An Epoch is a standard unit to control how fast threads run in comparison to one another. An epoch will most likely be 1 second.
 
 ## System Health
 Roles:
-- Contain flight software state machine
-- Read EPS for battery data
-- Set global flags to enable or disable aspects of the system
-- Send EPS heartbeat watchdog
+- Send heartbeats
+- Set global flags for deployment completion and operation status
+- Start threads when moving into their flags
 
 Wakes on:
-- Short intervals
+- Intervals
 - Tentatively EPS messages, if it sends them
 
 Communicates with:
