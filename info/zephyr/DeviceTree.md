@@ -159,3 +159,61 @@ Here is an example overlay, which would define a BNO055 model IMU on an I2C pin,
     };
 };
 ```
+
+## Syntax
+### Includes and Defines
+a `#include` can be used to bring in hardware definitions from a `.dtsi`, or standard C bindings.
+```dts
+#include <st/u5/stm32u575Xi.dtsi>
+#include <zephyr/dt-bindings/gpio/gpio.h>
+```
+A `#define` is a macro declaration, which should be used for most hardcoded values:
+```dts
+#define MY_CUSTOM_BAUD 115200
+```
+
+### Nodes
+- Everything must be built off the root node, which is called `/`.
+- Node structure: `[label:] <node-name>[@<unit-address>] { ... };`
+- The unit address (if included) must match the `reg = <0x...>` line within the node
+
+### Properties
+These are definitions set within a node
+
+Booleans: just the property name `boolean-value;`
+Strings: `status = "okay";`
+String Arrays: `compatible = "st,stm32-i2c", "st,stm32-i2c-v2";`
+Numbers (single): `clock-frequency = <100000>;`
+Numbers (multiple): `reg = <0x10000200 0x20>;`
+
+### Important Properties
+- `status` can be set to `"okay"` to enable something or `"disable"` to disable it
+- `compatible` names the device driver that should be associated with the device
+- `reg` defines memory addresses. We'll largely only use this to define pins used
+
+### Phandles
+You can reference something previously defined by using an ampersand (`&`) in front of its label. This can be used in overlays to modify existing configurations
+
+### Deletions
+- `/delete-node/ &node_label` can be used to remove a node definition from files lower in the hierarchy
+- `/delete-property/ property_name` can be used inside of a node to remove previously defined properties
+
+### Aliases & Chosen
+Zephyr specifically enables the use of aliases and a `chosen` block.
+
+Aliases let you specify some alternate names without direct modification of the `.dtsi` files
+
+The `chosen` block lets you specify the devices to use for Zephyr features
+```dts
+/ {
+  aliases {
+    led0 = &led_green;
+    uart = &usart1;
+  };
+
+  chosen {
+    zephyr,console = &usart1;
+    zephyr,sram = &sram0;
+  };
+};
+```
