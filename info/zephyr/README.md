@@ -21,7 +21,7 @@ Used as build configuration to tell CMake which pieces of code to include (subsy
 Drivers sit between hardware and application code to take care of the finer details. Zephyr has a very specific way of defining these and is quite macro heavy.
 
 ### Thread Model
-TODO
+Threads are defined statically, and work as loops that yield the CPU after executing its task
 
 ### Inter-Process Communication (IPC)
 TODO
