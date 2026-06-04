@@ -3,16 +3,20 @@ We are aiming to use Zephyr as the OS for PEROVSAT. It has a lot of really nice 
 
 This subdirectory of the repository aims to take some notes on all of the important conceptual aspects of Zephyr that a new dev to the team may need to understand before developing code for it.
 
+## References
+[Tutorial: Mastering Zephyr Driver Development](https://www.youtube.com/watch?v=o-f2qCd2AXo)
+This is a fantastic source to get a start on pretty much all the basics of Zephyr. He covers the DeviceTree and it's usage, as well as how to implement a driver with both the sensor API and a custom API
+
 ## Summary
 TODO
 
 ## Sections
 ### The DeviceTree
-TODO
+Goes over the three hierarchy levels to it and basic syntax
 ### Kconfig
 TODO
 ### Drivers
-TODO
+Drivers sit between hardware and application code to take care of the finer details. Zephyr has a very specific way of defining these and is quite macro heavy.
 ### Thread Model
 TODO
 ### Inter-Process Communication (IPC)
