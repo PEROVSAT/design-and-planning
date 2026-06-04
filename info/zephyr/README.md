@@ -24,7 +24,7 @@ Drivers sit between hardware and application code to take care of the finer deta
 Threads are defined statically, and work as loops that yield the CPU after executing its task
 
 ### Inter-Process Communication (IPC)
-TODO
+IPC is done with Message Queues (MSGQ). They can be allocated in compile time with a macro, and support the basic queue operations like put, get, and peek.
 
 ### Watchdog System
 TODO
