@@ -13,19 +13,27 @@ TODO
 ## Sections
 ### The DeviceTree
 Goes over the three hierarchy levels to it and basic syntax
+
 ### Kconfig
-TODO
+Used as build configuration to tell CMake which pieces of code to include (subsystems, drivers, modules, etc.)
+
 ### Drivers
 Drivers sit between hardware and application code to take care of the finer details. Zephyr has a very specific way of defining these and is quite macro heavy.
+
 ### Thread Model
-TODO
+Threads are defined statically, and work as loops that yield the CPU after executing its task
+
 ### Inter-Process Communication (IPC)
-TODO
+IPC is done with Message Queues (MSGQ). They can be allocated in compile time with a macro, and support the basic queue operations like put, get, and peek.
+
 ### Watchdog System
 TODO
+
 ### Power Management System
 TODO
+
 ### Meta Tool Usage
 TODO
+
 ### Testing
 TODO
